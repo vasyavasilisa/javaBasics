@@ -8,6 +8,6 @@ public class Lesson1Task1 {
 		  for (byte b : byteArray){
 			  sum += b;
 		  }
-			System.out.println(sum);
+		  System.out.println(sum);
 	}
 }
