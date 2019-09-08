@@ -10,9 +10,6 @@ public class Lesson1Task4 {
 	    System.out.println();
 	    changeCharRegister(chars);
 	    System.out.print(chars);
-	    
-
-
 	}
 	
 	public static char[] randomCharArray(int min, int max){

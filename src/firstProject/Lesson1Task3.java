@@ -8,20 +8,17 @@ public class Lesson1Task3 {
 		show(arr);
 		int[] arr2 = randomArray(11, 1, 6);
 		show(arr2);
-
-//		System.out.println("Сумма чётных элементов массива " + oddEvenSum(arr, true));
-//		System.out.println("Сумма нечётных элементов массива " + oddEvenSum(arr, false));
-//	    System.out.print("Число 3 встречалось максимум " + oddEvmaxSequence(arr, 3) + " раза");
-//	    int indOxVaxDiff = indexOfMaxDifference(arr);
-//	    System.out.print("Максимальная разница между " + indOxVaxDiff + "-м и "  + (indOxVaxDiff + 1) + "-м элементами");
-//		replace(arr, 1, 4);
-//		show(arr);
-//		sort(arr, false);
-//	    System.out.println();
-//		show(arr);
+		System.out.println("Сумма чётных элементов массива " + oddEvenSum(arr, true));
+		System.out.println("Сумма нечётных элементов массива " + oddEvenSum(arr, false));
+	    System.out.print("Число 3 встречалось максимум " + oddEvmaxSequence(arr, 3) + " раза");
+	    int indOxVaxDiff = indexOfMaxDifference(arr);
+	    System.out.print("Максимальная разница между " + indOxVaxDiff + "-м и "  + (indOxVaxDiff + 1) + "-м элементами");
+		replace(arr, 1, 4);
+		show(arr);
+		sort(arr, false);
+	    System.out.println();
+		show(arr);
 		show(cutAndMerge(arr, arr2, true));
-
-
 	}
 	
 	public static int random(int min, int max){
@@ -50,8 +47,7 @@ public class Lesson1Task3 {
 				sum += val;
 			}
 		}
-		return sum;
-	 
+		return sum; 
 	}
 	
 	public static int oddEvmaxSequence(int[] arr, int num){
