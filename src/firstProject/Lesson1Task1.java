@@ -10,5 +10,4 @@ public class Lesson1Task1 {
 		  }
 			System.out.println(sum);
 	}
-
 }
