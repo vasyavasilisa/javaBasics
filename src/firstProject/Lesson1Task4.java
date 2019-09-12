@@ -5,30 +5,23 @@ import java.util.Random;
 public class Lesson1Task4 {
 
 	public static void main(String[] args) {
-		char[] chars = randomCharArray(2, 22);
+		char[] chars = randomCharArray(4, 5);
 		System.out.print(chars);
-		 System.out.println();
-		 changeCharRegister(chars);
-		 System.out.print(chars);
+		System.out.println();
+		changeCharRegister(chars);
+		System.out.print(chars);
 	}
 
 	public static char[] randomCharArray(int min, int max) {
 		int lenght = Lesson1Task3.random(min, max);
-		int charNotLetterCount = 0;
 		char[] charArr = new char[lenght];
-		for (int i = 0; i < charArr.length; i++) {
-			charArr[i] = (char) Lesson1Task3.random('A', 'z');
-			if (charArr[i] > 'Z' && charArr[i] < 'a') {
-				charNotLetterCount++;
+		for (int i = 0; i < charArr.length;) {
+			int charInd = Lesson1Task3.random('A', 'z');
+			if (!(charInd > 'Z' && charInd < 'a')) {
+				charArr[i++] = (char) charInd;
 			}
 		}
-		char[] charArrLetters = new char[lenght - charNotLetterCount];
-		for (int i = 0, j = 0; i < charArr.length; i++) {
-			if (!(charArr[i] > 'Z' && charArr[i] < 'a')) {
-				charArrLetters[j++] = charArr[i];
-			}
-		}
-		return charArrLetters;
+		return charArr;
 	}
 
 	public static void changeCharRegister(char[] chars) {
