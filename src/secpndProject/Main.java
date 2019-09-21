@@ -12,7 +12,6 @@ public class Main {
 		 System.out.println(isPhoneNumberCorrect("8(29)6258585"));
 		 System.out.println(isPhoneNumberCorrect("225-89-89"));
 		 System.out.println(isPhoneNumberCorrect("(033)333 33 33"));
-
 		 System.out.println(isEmailAddressCorrect("email@mail.xx"));
 		 System.out.println(isEmailAddressCorrect("mail@tut.by"));
 		 System.out.println(isEmailAddressCorrect("jok@@eee.e"));
