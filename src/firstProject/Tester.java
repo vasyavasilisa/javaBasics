@@ -11,8 +11,9 @@ public class Tester {
 		System.out.println(a2.getName());
 		
 		ClassA b = new ClassB("Ваня",1,1);
-		System.out.println(((ClassB) b).getName());
-
+		System.out.println(b.getName());
+		
+		Something smth = Something.getInstance();
 	}
 
 }

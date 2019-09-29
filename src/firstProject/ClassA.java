@@ -1,6 +1,6 @@
 package firstProject;
 
-public class ClassA {
+public final class ClassA {
 	private int intValueA;
 	private String name;
 
