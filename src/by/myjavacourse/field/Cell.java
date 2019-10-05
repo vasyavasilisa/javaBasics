@@ -1,9 +1,13 @@
 package by.myjavacourse.field;
 
+import by.myjavacourse.boats.Boat;
+
 public class Cell {
 	private int x;
 	private int y;
 	private boolean isStriked;
+	private Boat boat;
+	private Field field;
 
 	public Cell(int x, int y) {
 		super();
@@ -29,6 +33,27 @@ public class Cell {
 
 	public boolean isStriked() {
 		return isStriked;
+	}
+
+	public boolean isFree(){
+		return this.boat == null;
+	}
+	
+	public Boat getBoat() {
+		return boat;
+	}
+
+	public void setBoat(Boat boat) {
+		this.boat = boat;
+	}
+
+	
+	public Field getField() {
+		return field;
+	}
+
+	public void setField(Field field) {
+		this.field = field;
 	}
 
 	public void setStriked(boolean isStriked) {
