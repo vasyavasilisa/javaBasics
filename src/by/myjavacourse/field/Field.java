@@ -18,9 +18,51 @@ public class Field {
 	public Cell getCell(int x, int y) {
 		return this.field[x][y];
 	}
-	
-	public boolean canPlaceBoat(Boat boat){
-		//todo
-		return false;
+
+	public boolean canPlaceBoat(Boat boat) {
+		if (boat == null) {
+			return false;
+		}
+		Cell[] cells = boat.getBody();
+		int x, y;
+		for (Cell cell : cells) {
+			x = cell.getX();
+			y = cell.getY();
+			if (x < 0 || y < 0 || x >= this.field[0].length || y >= this.field.length) {
+				return false;
+			}
+			if (!this.field[x][y].isFree()) {
+				return false;
+			}
+			if (y > 0) {
+				if (x > 0 && !this.field[y - 1][x - 1].isFree()) {
+					return false;
+				}
+				if (!this.field[y - 1][x].isFree()) {
+					return false;
+				}
+				if (x < this.field[0].length - 1 && !this.field[y - 1][x + 1].isFree()) {
+					return false;
+				}
+			}
+			if (x > 0 && !this.field[y][x - 1].isFree()) {
+				return false;
+			}
+			if (x < this.field[0].length - 1 && !this.field[y][x].isFree()) {
+				return false;
+			}
+			if (y < this.field.length - 1) {
+				if (x > 0 && !this.field[y + 1][x - 1].isFree()) {
+					return false;
+				}
+				if (!this.field[y + 1][x].isFree()) {
+					return false;
+				}
+				if (x < this.field[0].length - 1 && !this.field[y + 1][x + 1].isFree()) {
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 }
